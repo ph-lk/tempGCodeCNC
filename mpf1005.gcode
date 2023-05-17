@@ -5,24 +5,23 @@
 (Benennung)
 %MPF1005
 
-(Nullpunktverschiebung an StirnflŠche der Spannzangeneinrichtung)
+(Nullpunktverschiebung an Stirnflaeche der Spannzangeneinrichtung)
 N0005 G54
 
 (Verschiebung des Nullpunktes um Z = 45mm, es wird angenommen, dass das Halbzeug 45mm in Z-Richtung aus Spannzange herausguckt)
 N0010 G58 X0 Z45
 
 (Spindeldrehzahlbegrenzung auf 3000 U/min)
-N0015 G92 S30000
+N0015 G92 S3000
 
-(Verfahren im Eilgang auf Sicherheitsposition, um Kollision bei Werkzeugwechsel auszuschlie§en)
+(Verfahren im Eilgang auf Sicherheitsposition, um Kollision bei Werkzeugwechsel auszuschliessen)
 N0020 G0 D0 X100 Z100
 
 
-
-(Querplandrehen zum Schlichten der StirnflŠche)
+(Querplandrehen zum Schlichten der Stirnflaeche)
 
 (Schwenken des Werkzeugrevolvers auf Werkzeugplatz 1 (Klemmdrehhalter links) , Aufruf Korrekturwert D1, konstante Schnittgeschwindigkeit mit G96 und Vorschub F0,2)
-N0025 T1 D1 G96 S300 F0,2
+N0025 T1 D1 G96 S300 F0.2
 
 (Vorpositionieren zum Quer-Plandrehen im Eilgang in X)
 N0030 X22
@@ -33,20 +32,20 @@ N0030 Z1
 (Zustellen im Eilgang in X)
 N0035 Z-0.2
 
-(Querplandrehen der StirnflŠche)
+(Querplandrehen der Stirnflaeche)
 N0040 G1 X0
 
-(Nullpunkverschiebung an neu erzeugte fest definierte StirnflŠche)
+(Nullpunkverschiebung an neu erzeugte fest definierte Stirnflaeche)
 N0045 G58 X0 Z-0.2
 
-(Verfahren im Eilgang auf Sicherheitsposition, um Kollision bei Werkzeugwechsel auszuschlie§en)
+(Verfahren im Eilgang auf Sicherheitsposition, um Kollision bei Werkzeugwechsel auszuschliessen)
 N0050 G0 D0 X100 Z100
 
 
 
 (Erzeugen der Flachbohrung Durchmesser 12mm, Tiefe 2mm)
 
-(Werkzeugwechsel zu Werkzeugplat 2 (Axial-Einstech-Drehmei§el rechts) , Aufruf Korrekturwert D2, konstante Schnittgeschwindigkeit mit G96, Vorschub F0,1)
+(Werkzeugwechsel zu Werkzeugplat 2 (Axial-Einstech-Drehmeissel rechts) , Aufruf Korrekturwert D2, konstante Schnittgeschwindigkeit mit G96, Vorschub F0,1)
 N0055 T2 D2 G96 S125 F0.1
 
 (Vorpositionieren zum Einstechen von 12mm-Flachbohrung im Eilgang in X)
@@ -61,10 +60,10 @@ N0070 G1 Z-1
 (Ausformen der 1mm tiefen Flachbohrung)
 N0075 X0
 
-(ZurŸck fahren von Werkzeug im Eilgang in Z)
+(Zurueck fahren von Werkzeug im Eilgang in Z)
 N0080 G0 Z1
 
-(ZurŸck fahren von Werkzeug im Eilgang in X)
+(Zurueck fahren von Werkzeug im Eilgang in X)
 N0085 X12
 
 (Zustellung der Einstechtiefe von 2mm)
@@ -73,32 +72,32 @@ N0090 G1 Z-2
 (Ausformen der 2mm tiefen Flachbohrung)
 N0095 X0
 
-(Verfahren im Eilgang auf Sicherheitsposition, um Kollision bei Werkzeugwechsel auszuschlie§en)
-N0100 G0 D0 X100
-N0105 Z100
+(Verfahren im Eilgang auf Sicherheitsposition, um Kollision bei Werkzeugwechsel auszuschliessen)
+N0100 G0 D0 Z100
+N0105 X100
 
 
 
-(Schruppen der Au§enkontur)
+(Schruppen der Aussenkontur)
 (Werkzeugwechsel zu Werkzeugplatz 3 (Klemmdrehhalter rechts), Aufruf Korrekturwert D3, konstante Schnittgeschwindigkeit mit G96, Vorschub F0.25)
 N0110 T3 D3 G96 S300 F0.25
 
-(Nullpunkverschiebung Z=0 entspricht kŸnftiger StandflŠche von Turm)
-N0045 G58 X0 Z-25
+(Nullpunkverschiebung Z=0 entspricht kuenftiger Standflaeche von Turm)
+N0113 G58 X0 Z-25
 
-(Vorpositionieren zum Schruppen der Au§enkontur im Eilgang in X)
+(Vorpositionieren zum Schruppen der Aussenkontur im Eilgang in X)
 N0115 X21
 
-(Vorpositionieren zum Schruppen der Au§enkontur im Eilgang in Z)
+(Vorpositionieren zum Schruppen der Aussenkontur im Eilgang in Z)
 N0120 Z-1
 
 (Zustellung der Schrupptiefe von 0,5mm)
 N0125 G1 X19
 
-(Planschruppen Ÿber gesamte LŠnge des Turms)
+(Planschruppen ueber gesamte Laenge des Turms)
 N0130 Z26
 
-(ZurŸck fahren und Vorbereitung fŸr Teil-Interpolation der SchrŠgen)
+(Zurueck fahren und Vorbereitung fuer Teil-Interpolation der Schraegen)
 N0135 G0 X20
 N0140 Z3.5
 N0145 X19
@@ -109,237 +108,228 @@ N0150 G1 X15.4 Z5.2
 (Schruppen bis zum Ende der Kontur mit eingestellter Zustellung)
 N155 Z26
 
-(ZurŸck fahren und Vorbereitung fŸr Teil-Interpolation der SchrŠgen bis Durchmesser 12mm, sodass Kopfprofil geschlichtet werden kann)
-N0135 G0 X17
-N0140 Z5.2
-N0145 X15.4
+(Zurueck fahren und Vorbereitung fuer Teil-Interpolation der Schraegen bis Durchmesser 12mm, sodass Kopfprofil geschlichtet werden kann)
+N0160 G0 X17
+N0165 Z5.2
+N0170 X15.4
 
 (Zustellbewegung im 45¡ Winkel)
-N0150 G1 X12 Z6.9
+N0175 G1 X12 Z6.9
 
-(Schruppen, bis Kopfprofil fŸr Schlichten vorbereitet ist)
-N0150 Z13.8
-
+(Schruppen, bis Kopfprofil fuer Schlichten vorbereitet ist)
+N0180 Z13.8
 
 
 (Schlichten des Kopfprofils)
 
-(Anpassen der Schnittdaten fŸr Schlichten des Kopfprofils bei Verwendung des gleichen Werkzeugs 3)
-N0110 T3 D3 G96 S300 F0.1
+(Anpassen der Schnittdaten fuer Schlichten des Kopfprofils bei Verwendung des gleichen Werkzeugs 3)
+N0185 T3 D3 G96 S300 F0.1
 
-(Zustellen bis an untere StirnflŠche des Kopfs und Einschalten der Schneidenradiuskorrektur G42)
-N0115 G1 Z14 G42
-N0115 X13.5
+
+
+
+(Zustellen bis an untere Stirnflaeche des Kopfs und Einschalten der Schneidenradiuskorrektur G42)
+N0190 G1 X13.5 G42
+N0195 Z14
 
 (Schneidplatte Kontur entlang bewegen)
-N0190 G2 X14.1 Z15.45 B0.75
-N0190 G3 X13.5 Z15.85 B0.5
-N0190 G1 Z16.65
-N0190 G3 X14.1 Z17.05 B0.5
+N0200 G2 X14.1 Z15.437 B0.75
+N0205 G3 X13.5 Z15.896 B0.5
+N0210 G1 Z16.604
+N0215 G3 X14.1 Z17.063 B0.5
 
-N0190 G2 X14.1 Z18.45 B0.75
-N0190 G3 X13.5 Z18.85 B0.5
-N0190 G1 Z19.65
-N0190 G3 X14.1 Z20.05 B0.5
+N0220 G2 X14.1 Z18.437 B0.75
+N0225 G3 X13.5 Z18.896 B0.5
+N0230 G1 Z19.604
+N0235 G3 X14.1 Z20.063 B0.5
 
-N0190 G2 X14.1 Z21.45 B0.75
-N0190 G3 X13.5 Z21.85 B0.5
-N0190 G1 Z22.65
-N0190 G3 X14.1 Z23.05 B0.5
+N0240 G2 X14.1 Z21.437 B0.75
+N0245 G3 X13.5 Z21.896 B0.5
+N0250 G1 Z22.604
+N0255 G3 X14.1 Z23.063 B0.5
 
-N0190 G2 X15 Z23.75 B0.75
-N0190 G1 Z26 
-N0190 G0 X17 G40 
+N0260 G2 X15 Z23.75 B0.75
+N0265 G1 Z26 
+N0270 G0 X17 G40 
 
 
 
-(Fortsetzen der SchrŠge und des Radius und Durchmesser 5mm unterhalb des Kopfes)
-(Zum Schruppen wird des Radius noch nicht als Radius sonder als einzelne SchrŠgen interpoliert)
+(Fortsetzen der Schraege und des Radius und Durchmesser 5mm unterhalb des Kopfes)
+(Zum Schruppen wird des Radius noch nicht als Radius sonder als einzelne Schraegen interpoliert)
 
-(Anpassen der Schnittdaten fŸr Schruppen bei Verwendung des gleichen Werkzeugs 3)
+(Anpassen der Schnittdaten fuer Schruppen bei Verwendung des gleichen Werkzeugs 3)
 N0110 T3 D3 G96 S300 F0.25
 
-(ZurŸck fahren und Vorbereitung fŸr Teil-Interpolation der SchrŠgen bis zu Beginne des Radius 6,5)
-N0140 Z6.9
-N0145 X12
+(Zurueck fahren und Vorbereitung fuer Teil-Interpolation der Schraegen bis zu Beginne des Radius 6,5)
+N0275 Z6.9
+N0280 X12
 
 (Zustellbewegung)
-N0150 G1 X9 Z8.5
+N0285 G1 X9 Z8.5
 
-(Schruppen der neuen Zustelltiefe bis 0,2mm vor FlŠche des Kopfes)
-N0150 Z13.8
+(Schruppen der neuen Zustelltiefe bis 0,2mm vor Flaeche des Kopfes)
+N0290 Z13.8
 
-(ZurŸck fahren und Vorbereitung fŸr Teil-Interpolation der SchrŠgen)
-N0135 G0 X12
-N0140 Z8.5
-N0145 X9
+(Zurueck fahren und Vorbereitung fuer Teil-Interpolation der Schraegen)
+N0295 G0 X12
+N0300 Z8.5
+N0305 X9
 
 (Zustellbewegung)
-N0190 G1 X6 Z13
+N0310 G1 X6 Z13
 
-(Schruppen der neuen Zustelltiefe bis 0,2mm vor FlŠche des Kopfes)
-N0150 Z13.8
+(Schruppen der neuen Zustelltiefe bis 0,2mm vor Flaeche des Kopfes)
+N0315 Z13.8
 
 (Werkzeug wegfahren und Schlichten vorbereiten)
-N0190 G0 X20
-N0120 Z-1
+N0320 G0 X20
+N0325 Z-1
 
-(Schruppen der Au§enkontur hier abgeschlossen)
+(Schruppen der Aussenkontur hier abgeschlossen)
 
 
 
-(Schlichten der unter Au§enkontur ohne das Kopfprofil)
+(Schlichten der unter Aussenkontur ohne das Kopfprofil)
 
-(Anpassen der Schnittdaten fŸr Schlichten bei Verwendung des gleichen Werkzeugs 3)
-N0110 T3 D3 G96 S300 F0.1
+(Anpassen der Schnittdaten fuer Schlichten bei Verwendung des gleichen Werkzeugs 3)
+N0330 T3 D3 G96 S300 F0.1
 
 (Zustellbewegung des finalen Durchmessers und Aktivierung der Schneidenradiuskorrektur G42)
-N0290 G1 X18 G42
+N0335 G1 X18 G42
 
 
-(Im Folgenden mŸssen exakte Punkte der Kontur angegeben werden -> im CAD-Modell entnehmbar)
+(Im Folgenden muessen exakte Punkte der Kontur angegeben werden -> im CAD-Modell entnehmbar)
 
 
 (Durchmesser 18mm schlichten)
-N0125 Z3
+N0340 Z3
 
 
 
 (Radius R1 interpolieren)
-N0125 G2 X Z B1
+N0345 G2 X17.232 Z3.788 B1
 
-(SchrŠge interpolieren)
-N0130 G1 X Z
+(Schraege interpolieren)
+N0350 G1 X9.99 Z6.62
 
 
 
 (Radius R6.5 interpolieren)
-N0135 G3 X5 Z11.74 B6.5
+N0355 G3 X5 Z11.74 B6.5
 
 (Durchmesser 5mm schlichten)
-N0190 G1 Z13.5
+N0360 G1 Z13.5
 
 (Radius R0.5 interpolieren)
-N0290 G3 X6 Z14 B0.5
+N0365 G3 X6 Z14 B0.5
 
-(StirnflŠche an Unterseite von Kopf schlichten)
-N0145 G1 X16
+(Stirnflaeche an Unterseite von Kopf schlichten)
+N0370 G1 X16
 
 (Werkzeug in Sicherheitsposition bewegen)
-N0135 G0 X100 Z125
+N0375 G0 X100 Z125
 
-(Schlichten der Au§enkontur abgeschlossen)
+(Schlichten der Aussenkontur abgeschlossen)
 
 
 
-(Umspannen - ErklŠrungen siehe Hinweise Seite 9)
-N0400 R910=25 R911=17 R912=24.5 R920=0.2 R921=0.2 R931=3 R932=4 R933=4 R934=250 R935=0.1 R940=22 R941=-0.5 
+(Umspannen - Erklaerungen siehe Hinweise Seite 9)
+N0380 R910=25 R911=17 R912=24.5 R920=0.2 R921=0.2 R931=3 R932=4 R933=4 R934=250 R935=0.1 R940=22 R941=-0.5 
 
 (!!! Es muss noch in Erfahrung gebracht werden, wo nun Koordinatenursprung ist!!!)
 
 
 
-(Quer-Plandrehen zum Schlichten der abgestochenen FlŠche inkl. Šu§ere Fase)
+(Quer-Plandrehen zum Schlichten der abgestochenen Flaeche inkl. aeussere Fase)
 
 (!!! Annahme: Koordinatenursprung und -ausrichtung wie oben !!!)
 
-(Anpassen der Schnittdaten fŸr Schlichten bei Verwendung des Werkzeugs 3)
-N0110 T3 D3 G96 S300 F0.1
+(Anpassen der Schnittdaten fuer Schlichten bei Verwendung des Werkzeugs 3)
+N0385 T3 D3 G96 S300 F0.1
 
 (Schneide im Eilgang in Position bringen)
-N0450 G0 Z1.5
-N0455 X20
+N0390 G0 Z1.5
+N0395 X20
 
 (Schlichten der Fase)
-N0460 G1 X17 Z0 G42
+N0400 G1 X17 Z0 G42
 
-(Schlichten der StirnflŠche)
-N0465 X-0.5
+(Schlichten der Stirnflaeche)
+N0405 X-0.5
 
 (Entfernen des Werkzeugs und in Sicherheitsposition bringen)
-N0550 G0 Z-1 G40
-N0555 X100
-N0560 Z100
+N0410 G0 Z-1 G40
+N0415 X100
+N0420 Z100
 
 
 
 (Senkung erzeugen)
 
-(Werkzeugwechsel zu NC-Bohrer fŸr Senkung)
-N0565 T5 D5 G95 S3000 F0.1 M3 (!!! KlŠren, ob M3(rechtsdrehend) auch fŸr Gegenspindel wie hier korrekt)
+(Werkzeugwechsel zu NC-Bohrer fuer Senkung)
+N0425 T5 D5 G95 S3000 F0.1 M3 (!!! Klaeren, ob M3(rechtsdrehend) auch fuer Gegenspindel wie hier korrekt)
 
 (NC-Anbohrer im Eilgang positionieren)
-N0570 Z-3
-N0575 X0
+N0430 Z-3
+N0435 X0
 
 (Bohren der Senkung)
-N0580 G1 Z3.5
+N0440 G1 Z3.5
 
-(ZurŸckbewegen des Werkzeugs und in Sicherheitsposition)
-N0585 G0 Z-3
-N0590 X100
-N0595 Z100
+(Zurueckbewegen des Werkzeugs und in Sicherheitsposition)
+N0445 G0 Z-3
+N0450 X100
+N0455 Z100
 
 
 
 (Bohrung erzeugen)
 
-Werkzeugwechsel zu Spiralbohrer fŸr Bohrung
-N0600 T6 D6 G95 S3000 F0.14 M3
+Werkzeugwechsel zu Spiralbohrer fuer Bohrung
+N0460 T6 D6 G95 S3000 F0.14 M3
 
 (Bohrer im Eilgang positionieren)
-N0605 Z-3
-N0610 X0
+N0465 Z-3
+N0470 X0
 
-(Erzeugen der Bohrung) (!!! Hier wurde nicht wie in Hinweisen Bohrprogramm verwendet, abklŠren !!!)
-N0615 G1 Z7.5
+(Erzeugen der Bohrung) (!!! Hier wurde nicht wie in Hinweisen Bohrprogramm verwendet, abklaeren !!!)
+N0475 G1 Z7.5
 
-(ZurŸckfahren von Bohrer)
-N0620 G0 Z-3
-N0625 X100
-N0630 Z100
+(Zurueckfahren von Bohrer)
+N0480 G0 Z-3
+N0485 X100
+N0490 Z100
 
 (Spindel Halt)
-N0635 M5
+N0495 M5
 
-(Unbesetzten Werkzeugplatz wŠhlen)
-N0640 T7
+(Unbesetzten Werkzeugplatz waehlen)
+N0500 T7
 
 (Auffangschale vorfahren)
-N0645 M24
+N0505 M24
 
 (Verweilzeit in Position)
-N0650 G4 X3
+N0510 G4 X3
 
-(Spannmittel Gegenspindel šffnen und Aussto§e betŠtigen)
-N0655 M27
-N0660 M22
+(Spannmittel Gegenspindel aeffnen und Ausstosse betaetigen)
+N0515 M27
+N0520 M22
 
 (Spannmittelreinigung ein)
-N0665 M71
+N0525 M71
 
 (Verweilzeit in Position)
-N0650 G4 X1
+N0530 G4 X1
 
 (Auffangschale ausschwenken und ausfahren)
-N0670 M23
+N0535 M23
 
 (Spannmittelreinigung aus)
-N0675 M72
+N0540 M72
 
-(Spannmittel schlie§en)
-N0680 M28
+(Spannmittel schliessen)
+N0545 M28
 
 (Programmende)
-N0685 M30
-
-
-
-
-
-
-
-
-
-
-
+N0550 M30
