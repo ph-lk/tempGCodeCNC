@@ -158,7 +158,7 @@ N0270 G0 X17 G40
 (Zum Schruppen wird des Radius noch nicht als Radius sonder als einzelne Schraegen interpoliert)
 
 (Anpassen der Schnittdaten fuer Schruppen bei Verwendung des gleichen Werkzeugs 3)
-N0110 T3 D3 G96 S300 F0.25
+N0272 T3 D3 G96 S300 F0.25
 
 (Zurueck fahren und Vorbereitung fuer Teil-Interpolation der Schraegen bis zu Beginne des Radius 6,5)
 N0275 Z6.9
@@ -195,7 +195,7 @@ N0325 Z-1
 N0330 T3 D3 G96 S300 F0.1
 
 (Zustellbewegung des finalen Durchmessers und Aktivierung der Schneidenradiuskorrektur G42)
-N0335 G1 X18 G42
+N0335 G1 X18
 
 
 (Im Folgenden muessen exakte Punkte der Kontur angegeben werden -> im CAD-Modell entnehmbar)
