@@ -234,8 +234,7 @@ N0375 G0 X100 Z125
 
 
 (Umspannen - Erklaerungen siehe Hinweise Seite 9)
-N0380 R910=25 R911=17 R912=24.5 R920=0.2 R921=0.2 R931=3 R932=4 R933=4 R934=250 R935=0.1 R940=22 R941=-0.5 
-
+N0380 R910=25 R911=17 R912=24.5 R920=0.2 R921=0.2 R931=3 R932=4 R933=4 R934=250 R935=0.1 R940=22 R941=-0.5 L100 P1
 (!!! Es muss noch in Erfahrung gebracht werden, wo nun Koordinatenursprung ist!!!)
 
 
