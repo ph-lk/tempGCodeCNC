@@ -267,7 +267,7 @@ N0420 Z100
 (Senkung erzeugen)
 
 (Werkzeugwechsel zu NC-Bohrer fuer Senkung)
-N0425 T5 D5 G95 S3000 F0.1 M3 (!!! Klaeren, ob M3(rechtsdrehend) auch fuer Gegenspindel wie hier korrekt)
+N0425 T5 D5 G95 S3000 F0.1 M3
 
 (NC-Anbohrer im Eilgang positionieren)
 N0430 Z-3
