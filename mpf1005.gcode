@@ -27,7 +27,7 @@ N0025 T1 D1 G96 S300 F0.2
 N0030 X22
 
 (Vorpositionieren zum Quer-Plandrehen im Eilgang in Z)
-N0030 Z1
+N0031 Z1
 
 (Zustellen im Eilgang in X)
 N0035 Z-0.2
@@ -245,7 +245,7 @@ N0380 R910=25 R911=17 R912=24.5 R920=0.2 R921=0.2 R931=3 R932=4 R933=4 R934=250 
 (!!! Annahme: Koordinatenursprung und -ausrichtung wie oben !!!)
 
 (Anpassen der Schnittdaten fuer Schlichten bei Verwendung des Werkzeugs 3)
-N0385 T3 D3 G96 S300 F0.1
+N0385 T3 D7 G96 S300 F0.1
 
 (Schneide im Eilgang in Position bringen)
 N0390 G0 Z1.5
